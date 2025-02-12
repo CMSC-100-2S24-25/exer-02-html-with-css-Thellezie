@@ -33,6 +33,18 @@ Exercise 02: HTML & CSS
             max-height: 100%;  
         }
 
+        .image3D:hover {
+            transform: rotateX(10deg) rotateY(20deg);
+        }
+
+        .CoverName{
+            width: 500px;
+            position: absolute;
+            right: 7%;
+            top: 60%;
+
+        }
+
         .navbar{
             width: 100%;
             height: 60px; 
@@ -63,6 +75,10 @@ Exercise 02: HTML & CSS
         .navbar li {
             display: flex;
             align-items: center;
+        }
+
+        .navbar a:hover{
+           text-decoration: underline;
         }
 
         .navbar a{
@@ -114,8 +130,24 @@ Exercise 02: HTML & CSS
             list-style: none;
         }
 
+        /*Class of individual picture in previous projects*/
         .proj{
             width: 65%;
+        }
+
+        .proj:hover{
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .pokemon_design{
+            position: absolute;
+            width: 30%;
+            top: 10%;
+            right: 5%;
+        }
+
+        .pokemon_design:hover{
+            transform: rotateX(20deg) rotateY(-10deg);
         }
 
         /*Section: Skills and Autobio*/
@@ -130,12 +162,14 @@ Exercise 02: HTML & CSS
             padding-top: 40px;
             padding-left: 50px;
             background-color: white;
-            border: 2px solid black;
+            border: 2px solid transparent;
         }
 
         /*Skills*/
         .Skills{
             text-align: left;
+            display: flex;
+            justify-content: center;
             margin-top: 40px;
             border: 2px solid transparent;
             width: 33%;
@@ -153,22 +187,24 @@ Exercise 02: HTML & CSS
 
         .skill_image{
             width: 300px;
-            margin-left: 60px;
-           
-
+            padding: 10px;
         }
 
-        .skill_image:hover {
-            opacity: 0; 
-        }
 
         /*AutoBio*/
         .Autobiography{
             margin-top: 40px;
-            border: 2px solid black;
+            border: 2px solid transparent;
             width: 55%;
             height: 72%;
             transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .autoBio_text{
+            margin-left: 1%;
+            margin-top: 2%;
+            padding: 1%;
+            color: black;
         }
 
         
@@ -220,6 +256,7 @@ Exercise 02: HTML & CSS
 <body>
     <img src = "images/Background.png" alt = "background" class = "main-background">
     <img src = "images/Luthelle_3D.png" alt = "LuthellePhoto" class = "image3D" id = "home">
+    <img src = "images/Logo.png" alt = "Logo" class = "CoverName">
     
     <!--<li><a href="#"> HOME </a></li>-->
     <div class = "navbar">
@@ -235,6 +272,7 @@ Exercise 02: HTML & CSS
     
     <div class = "Projects" id = "project">
         <div class = "project_box">
+            <img src = "images/pokemon_design.png" class = "pokemon_design">
             <div class = "projects_header"><h2 style="margin-left: 20px;">PREVIOUS PROJECTS</h2></div>
             <div class = "Project_content">
                 <ul class = "project_list">
@@ -252,14 +290,22 @@ Exercise 02: HTML & CSS
     <div class = "Skills_AutoBio" id = "skills_auto">
         <!--Skills-->
         <div class = "Skills">
-            <h2 class = "skill_text">Skills</h2>
-            <img src = "images/Skill_set.png" alt = "Skills Image" class= "skill_image">
+            <h2 class = "skill_text"> Skills </h2>
+            <img src = "images/skill_front.png" alt = "Skills Image" class= "skill_image">
         </div>
 
         <!--AutoBio-->
         <div class = "Autobiography">
             <h2 class = "section-title"> Autobiography </h2>
-            <p>text here</p>
+            <p class = "autoBio_text"> 
+                My name is Luthelle L. Fernandez, and I was born on October 14, 2004, in Muntinlupa City, where I was also raised. 
+                Growing up in a household where both of my parents are high school Math teachers, I was exposed to use computers
+                that nurtured curiosity in graphic designing starting with creating PowerPoints and I enjoyed exploring the animations, 
+                transitions, and tools it provided, which became my first hands-on experience with digital creativity. <br><br>
+
+                As I grew older, my passion and curiosity for graphics designing deepened. Entering a Science High School, sparked my interest in the world of web development. 
+                I was captivated by the process of how coding bring ideas to life. 
+            </p>
         </div>
         
     </div>
