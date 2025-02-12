@@ -50,8 +50,11 @@ Exercise 02: HTML & CSS
             z-index: 1000;
         }
 
-        .navbar ul {
+        ul{
             list-style: none;
+        }
+
+        .navbar ul {
             display: flex;
             gap: 20px;
             padding: 45px;
@@ -132,18 +135,78 @@ Exercise 02: HTML & CSS
 
         /*Skills*/
         .Skills{
-            text-align: center;
-            border: 2px solid black;
+            text-align: left;
+            margin-top: 40px;
+            border: 2px solid transparent;
+            width: 33%;
+            height: 72%;
+            transition: box-shadow 0.3s ease-in-out; /*For smooth Transition: box shadow*/
         }
+
+        .Skills:hover, .Autobiography:hover{
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .skill_text, .section-title{
+            margin-left: 20px;
+        }
+
+        .skill_image{
+            width: 300px;
+            margin-left: 60px;
+           
+
+        }
+
+        .skill_image:hover {
+            opacity: 0; 
+        }
+
         /*AutoBio*/
+        .Autobiography{
+            margin-top: 40px;
+            border: 2px solid black;
+            width: 55%;
+            height: 72%;
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        
+
 
         /*Section: Footer Contents*/
         .Footer{
+            display: flex;
+            justify-content: center;
             position:  absolute;
-            top: 300%;
+            top: 298%;
             background-color: blueviolet;
             width: 100%;
             height: 100px;
+            
+        }
+
+        .Footer ul{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            list-style: none;
+            color: black;
+        }
+
+        .Footer a {
+            text-decoration: none;
+            color: black;
+            
+        }
+
+        .Footer a:hover {
+            text-decoration: underline;
+        }
+
+        .Footer p {
+            margin: 0;
+            font-size: 14px;
         }
 
     </style>
@@ -189,13 +252,13 @@ Exercise 02: HTML & CSS
     <div class = "Skills_AutoBio" id = "skills_auto">
         <!--Skills-->
         <div class = "Skills">
-            <h2>Skills</h2>
-            <img src = "" alt = "Skills Image">
+            <h2 class = "skill_text">Skills</h2>
+            <img src = "images/Skill_set.png" alt = "Skills Image" class= "skill_image">
         </div>
 
         <!--AutoBio-->
         <div class = "Autobiography">
-            <div class = "section-title"> Autobiography </div>
+            <h2 class = "section-title"> Autobiography </h2>
             <p>text here</p>
         </div>
         
@@ -205,8 +268,18 @@ Exercise 02: HTML & CSS
     <!--Footer-->
     <div class = "Footer">
         <ul>
-            <li></li>
-            <li></li>
+            <li><img src = "images/Logo.png" class = "Name_Logo"></li>
+            <li>
+                <p>
+                    35B Freedom Hills Subdivision Putatan, Muntinlupa City <br>
+                    Email: llfernandez4@up.edu.ph | Contact Number: 0912345689 <br>
+                    Design used in this webpage is inspired by Pokemon.
+                </p>   
+                
+                <a href = "#home"> Back to Top </a>
+                
+            </li>
+           
         </ul>
     </div>
    
